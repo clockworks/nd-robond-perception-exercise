@@ -5,7 +5,11 @@
 # http://svn.pointclouds.org/data/tutorials/table_scene_lms400.pcd
 
 import pcl
+
+
 p = pcl.load("table_scene_lms400.pcd")
+
+print(type(p))
 
 fil = p.make_statistical_outlier_filter()
 fil.set_mean_k(50)
